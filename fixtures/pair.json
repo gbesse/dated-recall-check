@@ -1,0 +1,8 @@
+{
+  "cases": [
+    {"id": "pricing", "query": "What did we decide on pricing in June?", "query_timestamp": "2026-07-01T00:00:00Z", "expected_ids": ["fact-pricing"]},
+    {"id": "launch", "query": "When was the launch moved?", "query_timestamp": "2026-07-01T00:00:00Z", "expected_ids": ["fact-launch"]}
+  ],
+  "before": {"pricing": ["fact-pricing", "other-1"], "launch": ["fact-launch", "other-2"]},
+  "after": {"pricing": ["other-1", "fact-pricing"], "launch": ["other-2", "other-3"]}
+}
