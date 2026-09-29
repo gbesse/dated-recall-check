@@ -12,6 +12,16 @@ python3 compare.py demo --lang fr
 
 La fixture montre un fait attendu qui sort du recall@10. Elle ne reproduit pas l’issue Hindsight #4939.
 
+**Exemple de sortie**
+
+```text
+Rappel daté avant → après
+Exemple hors ligne ; utilisez run pour deux endpoints Hindsight.
+pricing: 1.00 → 1.00 (inchangé)
+launch: 1.00 → 0.00 (perdu) fact-launch
+recall@10: 1.000 → 0.500
+```
+
 ## Projets voisins
 
 - [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight/issues/4939) — La régression mesurée sur les questions datées et ses limites motivent ce contrôle apparié.

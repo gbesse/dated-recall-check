@@ -12,6 +12,16 @@ python3 compare.py demo --lang en
 
 The fixture shows one expected fact falling out of recall@10. It is not a reproduction of Hindsight issue #4939.
 
+**Example output**
+
+```text
+Dated recall before → after
+Offline fixture; use run for two live Hindsight endpoints.
+pricing: 1.00 → 1.00 (unchanged)
+launch: 1.00 → 0.00 (lost) fact-launch
+recall@10: 1.000 → 0.500
+```
+
 ## Related projects
 
 - [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight/issues/4939) — The measured dated-recall regression and its caveats motivated the paired check.

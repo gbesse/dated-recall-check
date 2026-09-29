@@ -12,6 +12,16 @@ python3 compare.py demo --lang es
 
 El ejemplo muestra un hecho esperado que sale de recall@10. No reproduce la incidencia #4939 de Hindsight.
 
+**Ejemplo de salida**
+
+```text
+Recuerdo fechado antes → después
+Ejemplo sin conexión; use run para dos endpoints Hindsight.
+pricing: 1.00 → 1.00 (sin cambios)
+launch: 1.00 → 0.00 (perdido) fact-launch
+recall@10: 1.000 → 0.500
+```
+
 ## Proyectos cercanos
 
 - [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight/issues/4939) — La regresión medida en consultas fechadas y sus límites motivan esta comparación emparejada.

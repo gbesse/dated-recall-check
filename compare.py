@@ -101,7 +101,8 @@ def main(argv=None):
             print(TEXT[args.lang]["demo"])
         for row in rows:
             status = "lost" if row["after"] < row["before"] else ("gain" if row["after"] > row["before"] else "same")
-            print(f"{row['id']}: {row['before']:.2f} → {row['after']:.2f} ({TEXT[args.lang][status]}) {','.join(row['lost_ids'])}")
+            lost = f" {','.join(row['lost_ids'])}" if row["lost_ids"] else ""
+            print(f"{row['id']}: {row['before']:.2f} → {row['after']:.2f} ({TEXT[args.lang][status]}){lost}")
         print(f"recall@{args.k}: {summary['before']:.3f} → {summary['after']:.3f}")
     return 1 if summary["after"] < summary["before"] else 0
 
